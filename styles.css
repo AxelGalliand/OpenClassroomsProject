@@ -14,23 +14,33 @@ p {
   height: auto;
   display: grid;
   grid-template-columns: auto 1fr auto auto auto;
+  grid-template-areas: "head-logo . ancre inscri";
   place-items: center;
 
 }
 
-.head > div {
-  border: solid 4px #999
+.head-logo {
+  grid-area: head-logo;
+  padding: 2em;
 }
 
+.ancre {
+  grid-area: ancre;
+  display: flex;  
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  width: 100%;
+
+}
 
 .heberge {
-  padding:1em;
+  padding:2em;
   text-decoration: none;
   color: #0065FC;
 }
 
 .acti {
-  padding:1em;
+  padding:2em;
   text-decoration: none;
   color:black;
 }
@@ -40,12 +50,17 @@ p {
   color: #0065FC;
 
 }
-
+.heberge, .acti {
+  text-align: center;
+}
 .inscri {
-  padding:1em;
+  grid-area: inscri;
+  padding:2em;
   text-decoration: none;
   color: #0065FC;
   font-weight: 700;
+  flex-wrap: nowrap;
+  
 }
 
 .grid-item {
