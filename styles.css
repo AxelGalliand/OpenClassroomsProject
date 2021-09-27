@@ -1,6 +1,11 @@
 body {
   margin: 0 5% 0 5%;
 }
+@media (max-width: 575.98px){
+  body {
+    margin: 0;
+  }
+}
 
 h1 {
   font-family: 'Raleway', sans-serif;
@@ -76,14 +81,14 @@ ul, li {
   font-weight: 700;
   
 }
-@media screen and (min-width: 601px) {
+@media (min-width: 576px) {
   .head {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "head-logo . anchor signup";
   }
 }
 
-@media screen and (max-width: 600px){
+@media (max-width: 575.98px){
   .head {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 
@@ -122,9 +127,10 @@ ul, li {
 }
 
 .search {
-  display: inline-flex;
+  display: flex;
   overflow: auto;
   margin-bottom: 2rem;
+  
 }
 
 .marker {
@@ -136,7 +142,8 @@ ul, li {
   font-family: "Raleway", "Sans serif";
   font-weight: bold;
   border: solid #F2F2F2;
-  border-width: 1px 0 
+  border-width: 1px 0;
+  
 }
 .search button {
   background-color: #0065FC;
@@ -149,20 +156,26 @@ ul, li {
   cursor: pointer;
 }
 
-@media screen and (min-width: 601px) {
+@media (min-width: 576px) {
   .searchicon {
     display: none;
   }
 
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 575.98px) {
   .search span {
     display: none;
   }
 
   .search {
-    justify-content: center;
+    justify-content: space-between;
+  }
+  .searchzone {
+    width: 100%;
+  }
+  .searchfilters {
+    padding: 1rem;
   }
 }
 
@@ -332,6 +345,7 @@ header h2 {
   align-items: stretch;
   height: 100%;
   overflow: auto;
+  
 }
 
 .hostingpopularImg {
@@ -393,17 +407,24 @@ header h2 {
   .hostingpopular {
     grid-row-start: 1;
     grid-template-rows: auto repeat(3, 12rem);
+    border-radius: 0;
   }
 }
-@media screen and (min-width: 841px){
+@media (min-width: 576px){
   .hostingselect{ 
     grid-template-columns: repeat(3,1fr);
   }
 }
-@media screen and (max-width: 840px){
+@media (max-width: 575.98px){
+  .hostingselect {
+    padding: 1rem;
+  }
+  .hostingpopular {
+    padding: 1rem;
+    
+  }
   .hostingselect{
     grid-template-columns: 1fr;
-    
   }
 }
 .activity {
@@ -476,17 +497,18 @@ header h2 {
       grid-column: 4/5;
       grid-row: 4/7;
   }
-@media screen and (min-width: 841px){
+@media (min-width: 576px){
   .activity{
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
 }
 }
-@media screen and (max-width: 840px){
+@media (max-width: 575.98px){
   .activity{
   grid-template-columns: 1fr;
   grid-template-rows: auto repeat(6, 20rem);
   row-gap: 2rem;
+  padding: 1rem;
   }
 
   #one {
@@ -545,7 +567,7 @@ footer {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 840px) {
+@media (max-width: 575.98px) {
   .footercolumn {
     flex-direction: column;
     gap: 2rem 2rem;
