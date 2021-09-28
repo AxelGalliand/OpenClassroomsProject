@@ -77,9 +77,10 @@ ul, li {
   display: flex;
   grid-area: signup;
   padding:2em;
+}
+.signup a {
   color: #0065FC;
   font-weight: 700;
-  
 }
 @media (min-width: 576px) {
   .head {
@@ -130,20 +131,19 @@ ul, li {
   display: flex;
   overflow: auto;
   margin-bottom: 2rem;
-  
 }
 
 .marker {
   background-color: #F2F2F2;
   padding: 0.8em 1em;
-  border-radius: 32% 0 0 32%
+  border-radius: 32% 0 0 32%;
 }
+
 .searchzone {
   font-family: "Raleway", "Sans serif";
   font-weight: bold;
   border: solid #F2F2F2;
-  border-width: 1px 0;
-  
+  border-width: 1px 0;  
 }
 .search button {
   background-color: #0065FC;
@@ -157,19 +157,19 @@ ul, li {
 }
 
 @media (min-width: 576px) {
-  .searchicon {
-    display: none;
+  .search button i {
+    display:none;
   }
 
 }
 
 @media (max-width: 575.98px) {
   .search span {
-    display: none;
+    display:none;
   }
 
   .search {
-    justify-content: space-between;
+    justify-content: center;
   }
   .searchzone {
     width: 100%;
@@ -386,6 +386,7 @@ header h2 {
   display: flex;
   justify-self: start;
   padding: 0;
+  align-self: baseline;
 }
 
 .bluestar {
@@ -576,5 +577,4 @@ footer {
     row-gap: 15px;
     margin: 1rem 0rem 0rem 5rem;
   }
-  
 }
