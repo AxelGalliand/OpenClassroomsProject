@@ -1,10 +1,5 @@
 body {
-  margin: 0 5% 0 5%;
-}
-@media (max-width: 575.98px){
-  body {
-    margin: 0;
-  }
+  margin: 0 ;
 }
 
 h1 {
@@ -56,11 +51,13 @@ ul, li {
 
 .hostinganchor {
   padding:2em;
+  text-align: center;
   color: #0065FC;
   border-top: 3px solid #0065FC;
 }
 
 .activityanchor {
+  text-align: center;
   padding:2em;
   color:black;
 }
@@ -82,14 +79,17 @@ ul, li {
   color: #0065FC;
   font-weight: 700;
 }
-@media (min-width: 576px) {
+@media (min-width: 676px) {
   .head {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "head-logo . anchor signup";
   }
+  .head, .searchfilters {
+    padding: 0 4rem;
+  }
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 675.98px){
   .head {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 
@@ -105,16 +105,17 @@ ul, li {
     order: 1;
   }
   .anchor {
-    order: 2;
-    justify-content: center;
+    order: 2;   
   }
   .hostinganchor {
+    width: 50%;
     padding:2em;
     color: #0065FC;
     border-top: none;
     border-bottom: 3px solid #0065FC;
   }
   .activityanchor {
+    width: 50%;
     border-bottom: 3px solid #F2F2F2;
     color: black;
   
@@ -156,28 +157,6 @@ ul, li {
   cursor: pointer;
 }
 
-@media (min-width: 576px) {
-  .search button i {
-    display:none;
-  }
-
-}
-
-@media (max-width: 575.98px) {
-  .search span {
-    display:none;
-  }
-
-  .search {
-    justify-content: center;
-  }
-  .searchzone {
-    width: 100%;
-  }
-  .searchfilters {
-    padding: 1rem;
-  }
-}
 
 .filters {
   display: flex;
@@ -252,6 +231,34 @@ ul, li {
 .infosearchresult {
   font-family: "Raleway", "Sans serif";
 }
+@media (min-width: 576px) and (max-width: 675.98px){
+  .searchfilters {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 576px) {
+  .search button i {
+    display:none;
+  }
+}
+  
+@media (max-width: 575.98px) {
+  .search span {
+    display:none;
+  }
+
+  .search {
+    justify-content: center;
+  }
+  .searchzone {
+    width: 100%;
+  }
+  .searchfilters {
+    padding: 1rem;
+  }
+}
+
+
 
 .hosting {
   display: grid;
@@ -411,12 +418,27 @@ header h2 {
     border-radius: 0;
   }
 }
-@media (min-width: 576px){
+
+@media (min-width: 800px){
+  .hosting {
+    padding: 0 4rem;
+  }
   .hostingselect{ 
     grid-template-columns: repeat(3,1fr);
   }
 }
+@media (max-width: 799px){
+  .hosting {
+    padding: 0 4rem;
+  }
+  .hostingselect{ 
+    grid-template-columns: repeat(2,1fr);
+  }
+}
 @media (max-width: 575.98px){
+  .hosting {
+    padding: 0;
+  }
   .hostingselect {
     padding: 1rem;
   }
@@ -480,41 +502,80 @@ header h2 {
   }
 
   #three {
+      grid-column: 2/3;
+      grid-row: 6/7;
+  }
+
+  #four {
       grid-column: 3/4;
       grid-row: 2/7;
   }
 
-  #four {
+  #five {
       grid-column: 4/5;
       grid-row: 2/3;
-  }
-
-  #five {
-      grid-column: 2/3;
-      grid-row: 6/7;
   }
 
   #six {
       grid-column: 4/5;
       grid-row: 4/7;
   }
-@media (min-width: 576px){
+@media (min-width: 800px){
   .activity{
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+    padding: 0 4rem;
+  } 
+}
+@media (max-width: 799px){
+  .activity{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto repeat(3, 13rem);
+    row-gap: 2rem;
+    padding: 0 4rem;
+  }
+#one {
+    grid-column: 1/2;
+    grid-row: 2;
+}
+
+#two {
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+#three {
+    grid-column: 1/2;
+    grid-row: 3;
+}
+
+#four {
+    grid-column: 2/3;
+    grid-row: 3;
+}
+
+#five {
+    grid-column: 1/2;
+    grid-row: 4;
+}
+
+#six {
+    grid-column: 2/3;
+    grid-row: 4;
 }
 }
 @media (max-width: 575.98px){
   .activity{
-  grid-template-columns: 1fr;
-  grid-template-rows: auto repeat(6, 20rem);
-  row-gap: 2rem;
-  padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(6, 20rem);
+    row-gap: 2rem;
+    padding: 1rem;
+    margin: 0 0 2rem 0;
   }
 
-  #one {
-    grid-row: 2;
+#one {
     grid-column: 1/2;
+    grid-row: 2;
 }
 
 #two {
@@ -550,9 +611,8 @@ footer {
 .footercolumn {
   display: flex;
   flex-direction: row;
-  flex: row;
+  gap: 15% 15%;
   margin: auto;
-  gap: 5rem 5rem;
  
 }
 
@@ -568,13 +628,19 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 1171px){
+  .footercolumn {
+    gap: 10% 10%;
+  }
+}
+@media (max-width: 799px) {
   .footercolumn {
     flex-direction: column;
     gap: 2rem 2rem;
+    padding-bottom: 15%;
   }
   .footercolumnunit{
     row-gap: 15px;
-    margin: 1rem 0rem 0rem 5rem;
+    margin: 1rem 0rem 0rem 2rem;
   }
 }
