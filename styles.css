@@ -1,3 +1,4 @@
+                                  /* general info*/
 body {
   margin: 0 ;
 }
@@ -26,7 +27,7 @@ ul, li {
   list-style: none;
   padding: 0;
 }
-
+                                        /* head CSS start */
 .head {
   font-style: normal;
   font-family: 'Raleway', sans-serif;
@@ -127,12 +128,14 @@ ul, li {
   
   }
 }
-
+                                        /* head CSS end */
+                                      /*filters CSS start*/
 .search {
   display: flex;
   overflow: auto;
   margin-bottom: 2rem;
 }
+
 
 .marker {
   background-color: #F2F2F2;
@@ -257,8 +260,8 @@ ul, li {
     padding: 1rem;
   }
 }
-
-
+                                              /*filers CSS end*/
+                                            /*hosting CSS start*/
 
 .hosting {
   display: grid;
@@ -450,6 +453,8 @@ header h2 {
     grid-template-columns: 1fr;
   }
 }
+                                            /*hosting CSS end*/
+                                          /*activity CSS start*/
 .activity {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -603,6 +608,9 @@ header h2 {
     grid-row: 7;
 }
 }
+                                          /*activity CSS end*/
+                                          /*footer CSS start*/
+
 footer {
   width: 100%;
   background-color: #F2F2F2;
@@ -644,3 +652,4 @@ footer {
     margin: 1rem 0rem 0rem 2rem;
   }
 }
+                                          /*footer CSS end*/

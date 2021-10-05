@@ -13,6 +13,7 @@
 
   <body>
     <!--header start-->
+   <nav>
     <ul class="head">
       <li class="head-logo"><img src="imagesP2/Reservia.svg" alt="logo reservia">
       </li>
@@ -27,73 +28,69 @@
         </a>
       </li>
     </ul>
+   </nav> 
     <!--header end-->
     <!--filtre start-->
-    <ul class="searchfilters">
-      <li>
-       <h1>Trouvez votre hébergement pour des vacances de rêve
-       </h1>
+   <section class="searchfilters">
+    <h1>Trouvez votre hébergement pour des vacances de rêve
+    </h1>
+    <p>En plein centre ville ou en pleine nature
+    </p>
+    <form class="search">
+      <div class="marker"><i class="fas fa-map-marker-alt"></i>
+      </div>
+       <input class="searchzone" type="search" placeholder="Marseille, France"> 
+       <button> 
+        <span>Recherche
+        </span>
+         <i class="searchicon fas fa-search"></i>
+       </button> 
+    </form>
+    <nav>
+     <ul class="filters">
+      <li> 
+       <h2 class="filterstitel">Filtres
+       </h2>
+      </li>  
+      <li class="filtersbutton">
+       <div class="filtersbuttonicon"><i class="fas fa-solid fa-money-bill-wave"></i>
+       </div>
+       <span class="filtersbuttontitel">Économique
+       </span>
       </li>
-      <li>
-       <p>En plein centre ville ou en pleine nature
-       </p>
+      <li class="filtersbutton">
+       <div class="filtersbuttonicon"><i class="fas fa-solid fa-child"></i>
+       </div>
+       <span class="filtersbuttontitel">Familial
+       </span>
       </li>
-      <li>
-       <form class="search">
-         <div class="marker"><i class="fas fa-map-marker-alt"></i>
-         </div>
-          <input class="searchzone" type="search" placeholder="Marseille, France"> 
-          <button> 
-           <span>Recherche
-           </span>
-            <i class="searchicon fas fa-search"></i>
-          </button> 
-       </form> 
+      <li class="filtersbutton">
+       <div class="filtersbuttonicon"><i class="fas fa-solid fa-heart"></i>
+       </div>
+       <span class="filtersbuttontitel">Romantique
+       </span>
       </li>
-      <li>
-       <ul class="filters">
-        <li> 
-         <h2 class="filterstitel">Filtres
-         </h2>
-        </li>  
-        <li class="filtersbutton">
-          <div class="filtersbuttonicon"><i class="fas fa-solid fa-money-bill-wave"></i>
-          </div>
-          <span class="filtersbuttontitel">Économique
-          </span>
-        </li>
-        <li class="filtersbutton">
-          <div class="filtersbuttonicon"><i class="fas fa-solid fa-child"></i>
-          </div>
-          <span class="filtersbuttontitel">Familial
-          </span>
-        </li>
-        <li class="filtersbutton">
-          <div class="filtersbuttonicon"><i class="fas fa-solid fa-heart"></i>
-          </div>
-          <span class="filtersbuttontitel">Romantique
-          </span>
-        </li>
-        <li class="filtersbutton">
-          <div class="filtersbuttonicon"><i class="fas fa-solid fa-dog"></i>
-          </div>
-          <span class="filtersbuttontitel">Animaux autorisés
-          </span>
-        </li> 
-      </ul> 
-      <ul class="infosearch">
-        <li class="infosearchicon"><i class="fas fa-solid fa-info"></i>
-        </li>
-        <li>
-         <span class="infosearchresult">Plus de 500 logements sont disponibles dans cette ville
-         </span>
-        </li>  
-      </ul>  
+      <li class="filtersbutton">
+       <div class="filtersbuttonicon"><i class="fas fa-solid fa-dog"></i>
+       </div>
+       <span class="filtersbuttontitel">Animaux autorisés
+       </span>
+      </li> 
+     </ul>
+    </nav> 
+    <ul class="infosearch">
+     <li class="infosearchicon"><i class="fas fa-solid fa-info"></i>
+     </li>
+     <li>
+      <span class="infosearchresult">Plus de 500 logements sont disponibles dans cette ville
+      </span>
+     </li>  
     </ul>  
-      <!--filtre end-->
-    <!--hosting start-->
+   </section>
+   <!--filtre end-->
+   <!--hosting start-->
     <div class="hosting" id="hebergements">
-     <div class="hostingselect">
+     <section class="hostingselect">
       <header>
         <h2>Hébergement à marseille
         </h2>
@@ -170,7 +167,7 @@
          <h3>Hôtel de la mer
          </h3>
          <p>Nuit à partire de <strong>46€</strong>
-        </p>
+         </p>
          <ul class="hostingselectnote">
           <li class="bluestar"><i class="fas fa-star"></i>
           </li>
@@ -231,8 +228,8 @@
       </article>
       <a class="hostingselectionviewmore" href="#">Afficher plus
       </a>
-     </div>
-     <div class="hostingpopular">
+     </section>
+     <section class="hostingpopular">
       <h2 class="hostingpopularhead">Les plus populaire<i class="fas fa-chart-line"></i>
       </h2>
       <article>
@@ -341,11 +338,11 @@
          </ul>
        </a> 
       </article>
-     </div>  
+     </section>  
     </div>
     <!--hosting end-->
     <!--activity start-->
-    <div class="activity" id="activites">
+    <section class="activity" id="activites">
       <h2>Activités à Marseille
       </h2>
       <a id="one" href="#">
@@ -390,7 +387,7 @@
        <h3>Parc Longchamp
        </h3>
       </a>
-    </div>
+    </section>
     <!--activity end-->
     <!--footer stat-->
     <footer>
